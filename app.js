@@ -14,5 +14,10 @@ app.use('/', indexRouter);
 app.use('/new', newRouter);
 app.use('/messages', messagesRouter);
 
+app.use((err, req, res, next) => {
+  console.log(err.message);
+  res.status(500).send(err.message);
+});
+
 const PORT = process.env.PORT;
 app.listen(PORT);
