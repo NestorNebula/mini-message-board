@@ -3,20 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <title>Mini Message Board</title>
   </head>
   <body>
     <h2>Messages</h2>
-    <% messages.forEach((message, index) => { %>
-    <div class="message">
-      <div><%= message.user %></div>
-      <div><%= message.text %></div>
-      <div><%= message.added %></div>
-      <button>
-        <a href="messages/<%= index %>">See message details</a>
-      </button>
+    <div class="messages">
+      <% messages.forEach((message, index) => { %>
+      <div class="message">
+        <div><%= message.user %></div>
+        <div><%= message.text %></div>
+        <div><%= message.added %></div>
+        <button>
+          <a href="messages/<%= index %>">See message details</a>
+        </button>
+      </div>
+      <% }) %>
     </div>
-    <% }) %>
-    <a href="/new">Send a message</a>
+    <a class="link" href="/new">Send a message</a>
   </body>
 </html>
