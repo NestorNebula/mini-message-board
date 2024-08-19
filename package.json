@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/NestorNebula/mini-message-board/issues"
   },
-  "homepage": "https://github.com/NestorNebula/mini-message-board#readme"
+  "homepage": "https://github.com/NestorNebula/mini-message-board#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
