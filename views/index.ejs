@@ -7,11 +7,14 @@
   </head>
   <body>
     <h2>Messages</h2>
-    <% messages.forEach((message) => { %>
+    <% messages.forEach((message, index) => { %>
     <div class="message">
       <div><%= message.user %></div>
       <div><%= message.text %></div>
       <div><%= message.added %></div>
+      <button>
+        <a href="messages/<%= index %>">See message details</a>
+      </button>
     </div>
     <% }) %>
     <a href="/new">Send a message</a>
