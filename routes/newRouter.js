@@ -1,15 +1,8 @@
 const express = require('express');
 const newRouter = express.Router();
-const { messages } = require('./indexRouter');
+const newController = require('../controllers/newController');
 
-newRouter.get('/', (req, res) => res.render('form'));
-newRouter.post('/', (req, res) => {
-  const messageUser = req.body.author;
-  const messageText = req.body.message;
-  if (messageUser && messageText) {
-    messages.push({ text: messageText, user: messageUser, added: new Date() });
-  }
-  res.redirect('/');
-});
+newRouter.get('/', newController.getNew);
+newRouter.post('/', newController.postNew);
 
 module.exports = newRouter;
