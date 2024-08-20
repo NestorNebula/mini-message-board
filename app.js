@@ -16,7 +16,7 @@ app.use('/new', newRouter);
 app.use('/messages', messagesRouter);
 
 app.use((err, req, res, next) => {
-  console.log(err.message);
+  console.log(err);
   res.status(500).send(err.message);
 });
 
