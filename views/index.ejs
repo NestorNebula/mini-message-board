@@ -9,13 +9,13 @@
   <body>
     <h2>Messages</h2>
     <div class="messages">
-      <% messages.forEach((message, index) => { %>
+      <% messages.forEach((message) => { %>
       <div class="message">
         <div><%= message.user %></div>
         <div><%= message.text %></div>
         <div><%= message.added %></div>
         <button>
-          <a href="messages/<%= index %>">See message details</a>
+          <a href="messages/<%= message.id %>">See message details</a>
         </button>
       </div>
       <% }) %>
