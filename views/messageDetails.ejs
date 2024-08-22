@@ -4,14 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/styles.css" />
-    <title><%= `${message.user} : ${message.text.slice(0, 5)}...` %></title>
+    <title>
+      <%= `${message.username} : ${message.message.slice(0, 5)}...` %>
+    </title>
   </head>
   <body class="details">
     <h2>Message's Details</h2>
     <div class="message">
-      <div>From: <%= message.user %></div>
-      <div>Message: <%= message.text %></div>
-      <div>Date: <%= message.added %></div>
+      <div>From: <%= message.username %></div>
+      <div>Message: <%= message.message %></div>
+      <div>Date: <%= message.date.toLocaleDateString() %></div>
     </div>
     <a class="link" href="/">Return to Homepage</a>
   </body>
