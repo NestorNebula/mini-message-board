@@ -1,15 +1,15 @@
-const { messages } = require('../routes/indexRouter');
+const db = require('../db/queries');
 
 const getNew = (req, res) => res.render('form');
 
-const postNew = (req, res) => {
+const postNew = async (req, res) => {
   const messageUser = req.body.author;
   const messageText = req.body.message;
   if (messageUser && messageText) {
-    messages.push({
-      text: messageText,
+    db.insertMessage({
       user: messageUser,
-      added: new Date().toLocaleDateString('en'),
+      text: messageText,
+      added: new Date().toISOString().split('T')[0],
     });
   }
   res.redirect('/');
