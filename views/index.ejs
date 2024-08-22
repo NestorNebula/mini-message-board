@@ -11,9 +11,9 @@
     <div class="messages">
       <% messages.forEach((message) => { %>
       <div class="message">
-        <div><%= message.user %></div>
-        <div><%= message.text %></div>
-        <div><%= message.added %></div>
+        <div><%= message.username %></div>
+        <div><%= message.message %></div>
+        <div><%= message.date %></div>
         <button>
           <a href="messages/<%= message.id %>">See message details</a>
         </button>
