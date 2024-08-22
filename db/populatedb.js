@@ -17,7 +17,7 @@ VALUES
 
 async function main() {
   const client = new Client({
-    connectionString: process.env.LOCAL_DB,
+    connectionString: process.env.PRODUCTION_DB,
   });
   await client.connect();
   await client.query(SQL);
