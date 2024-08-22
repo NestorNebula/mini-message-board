@@ -13,7 +13,10 @@ async function insertMessage(message) {
 }
 
 async function getMessage(id) {
-  await pool.query('SELECT * FROM messages WHERE id = $1', [id]);
+  const { rows } = await pool.query('SELECT * FROM messages WHERE id = $1', [
+    id,
+  ]);
+  return rows;
 }
 
 module.exports = {
