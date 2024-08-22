@@ -6,6 +6,8 @@
 
 This project is a Mini Message board App that displays a list of messages and allows users to add more messages to this list.
 
+The messages added to the page are stored using PostgreSQL.
+
 The website has 3 pages:
 
 - The Homepage
@@ -16,6 +18,7 @@ The website has 3 pages:
 
 [![NodeJS](https://skillicons.dev/icons?i=nodejs&theme=light)](https://nodejs.org/)
 [![Express](https://skillicons.dev/icons?i=express&theme=light)](https://expressjs.com/)
+[![PostgreSQL](https://skillicons.dev/icons?i=postgresql&theme=light)](https://www.postgresql.org/)
 [![CSS](https://skillicons.dev/icons?i=css)](https://skillicons.dev)
 
 ## License
@@ -26,11 +29,15 @@ The website has 3 pages:
 
 Noa Houssier - [Github](https://github.com/NestorNebula)
 
-Project Repository Link - [Mini Message Board](https://github.com/NestorNebula/mini-message-board)
+Project:
+
+- [Repository](https://github.com/NestorNebula/mini-message-board)
+- [Link](https://mini-message-board-xy0k.onrender.com)
 
 ## Acknoledgements
 
 - [EJS](https://github.com/tj/ejs)
 - [Dotenv](https://www.npmjs.com/package/dotenv)
+- [Node Postgres](https://github.com/brianc/node-postgres)
 
 <p align='right'>(<a href='#top'>back to top</a>)</p>
