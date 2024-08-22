@@ -1,11 +1,11 @@
-const { messages } = require('../routes/indexRouter');
+const db = require('../db/queries');
 
-const getMessage = (req, res) => {
-  const message = messages[req.params.message];
+const getMessage = async (req, res) => {
+  const [message] = await db.getMessage(req.params.message);
   if (!message) {
     throw new Error("Couldn't find the message.");
   }
-  res.render('messageDetails', { message: message });
+  res.render('messageDetails', { message });
 };
 
 module.exports = { getMessage };
